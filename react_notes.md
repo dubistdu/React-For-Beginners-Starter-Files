@@ -67,7 +67,8 @@ for importing helper functions...
 # handling events in React
 In react it wraps js event in synthetic event so it works across devices
 
-`<button onClick={this.handleClick}>Click me!</button>` you don't do `this.handleClick()` like in js beause `()` will make event load on page load. Which means will run when component is mounted on page load/
+`<button onClick={this.handleClick}>Click me!</button>` You just provide event name.
+You don't do `this.handleClick()` like in js beause `()` will make event load on page load. Which means will run when component is mounted on page load/
 
 After writing event, then go above return and then add/create handleClick function
 ```
@@ -78,3 +79,8 @@ handleClick() {
 ```
 Everytime handling event gets confusing...just watch this https://courses.wesbos.com/account/access/592dd6fec373d435bb82dc0f/view/257751801
 
+# handling input without touching DOM
+https://courses.wesbos.com/account/access/592dd6fec373d435bb82dc0f/view/257751801
+1. `ref` (this actually touches the DOM) `createRef`  usage:`myInput = React.createRef();`
+- custom method that's created by user (one that did not come with React.Compnent) needs to be bound to React
+hence.... `bind`
