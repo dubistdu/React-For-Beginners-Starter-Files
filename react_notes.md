@@ -84,3 +84,44 @@ https://courses.wesbos.com/account/access/592dd6fec373d435bb82dc0f/view/25775180
 1. `ref` (this actually touches the DOM) `createRef`  usage:`myInput = React.createRef();`
 - custom method that's created by user (one that did not come with React.Compnent) needs to be bound to React
 hence.... `bind`
+
+```
+import React from "react";
+import { getFunName } from "../helpers";
+
+class StorePicker extends React.Component {
+  myInput = React.createRef();
+ //   ^^^ input text
+  goToStore = event => {
+    // 1. Stop the form from submitting
+    event.preventDefault();
+    // 2. get the text from that input
+    console.log(this);
+
+    // 3. Change the page to /store/whatever-they-entered
+  };
+  render() {
+    return (
+      <form className="store-selector" onSubmit={this.goToStore}>
+        <h2>Please Enter A Store</h2>
+        <input
+          type="text"
+          ref={this.myInput}
+          required
+          placeholder="Store Name"
+          defaultValue={getFunName()}
+        />
+        <button type="submit">Visit Store →</button>
+      </form>
+    );
+  }
+}
+
+export default StorePicker;
+```
+## Constructor (it's like an initializer in Ruby)
+
+"The constructor method is a special method for creating and initializing an object created with a class. There can only be one special method with the name "constructor" in a class. A SyntaxError will be thrown if the class contains more than one occurrence of a constructor method.
+
+A constructor can use the super keyword to call the constructor of the super class."
+If you are using `constructor`, you always call `super`
