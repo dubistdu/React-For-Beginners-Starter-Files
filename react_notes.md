@@ -79,7 +79,7 @@ handleClick() {
 ```
 Everytime handling event gets confusing...just watch this https://courses.wesbos.com/account/access/592dd6fec373d435bb82dc0f/view/257751801
 
-# handling input without touching DOM
+### handling input with ref
 https://courses.wesbos.com/account/access/592dd6fec373d435bb82dc0f/view/257751801
 1. `ref` (this actually touches the DOM) `createRef`  usage:`myInput = React.createRef();`
 - custom method that's created by user (one that did not come with React.Compnent) needs to be bound to React
