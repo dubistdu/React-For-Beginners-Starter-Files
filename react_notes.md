@@ -100,6 +100,10 @@ class StorePicker extends React.Component {
 
     // 3. Change the page to /store/whatever-they-entered
   };
+  
+  // ^^^ explanation .... goToStore is a property just like myInput is a property of storePicker then we set it to an arrow //   // function which will allow us to to bind value of "this" (like this in console.log) to the storePicker component
+  // in other words, it's binding goToStore method, which is a custom method to "StorePciker" component so we can use it.
+
   render() {
     return (
       <form className="store-selector" onSubmit={this.goToStore}>
