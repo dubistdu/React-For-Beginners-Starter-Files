@@ -125,4 +125,4 @@ export default StorePicker;
 
 A constructor can use the super keyword to call the constructor of the super class."
 If you are using `constructor`, you always call `super`
-When you call `super()`, this calls React.Component which needs to be ran before extending` class Created
+When you call `super()`, this calls React.Component which needs to be ran before extending class Created ex) `StorePciker`
