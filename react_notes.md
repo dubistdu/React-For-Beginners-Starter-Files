@@ -92,15 +92,14 @@ import { getFunName } from "../helpers";
 class StorePicker extends React.Component {
   myInput = React.createRef();
  //   ^^^ input text
+ 
   goToStore = event => {
     // 1. Stop the form from submitting
     event.preventDefault();
     // 2. get the text from that input
     console.log(this);
-
     // 3. Change the page to /store/whatever-they-entered
   };
-  
   // ^^^ explanation .... goToStore is a property just like myInput is a property of storePicker then we set it to an arrow //   // function which will allow us to to bind value of "this" (like this in console.log) to the storePicker component
   // in other words, it's binding goToStore method, which is a custom method to "StorePciker" component so we can use it.
 
