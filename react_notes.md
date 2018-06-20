@@ -152,3 +152,39 @@ state = {
 * How do we get item into state? (16:45)
   The method that updates the state and the actual state always need to live in the exact same component
   
+* to update states you have to use React's existing setState API
+
+```
+addFish = fish => {
+    // 1. Take a copy of the existing state
+    const fishes = { ...this.state.fishes };
+    // 2. Add our new fish to that fishes variable
+    fishes[`fish${Date.now()}`] = fish;
+    // 3. Set the new fishes object to state
+    this.setState({ fishes });
+  };
+```
+
+# Laoding data into state onClick
+* Anything that gets passed into a component is available on the props
+` <button onClick={this.props.loadSampleFishes}>`
+```
+import React from "react";
+import AddFishForm from "./AddFishForm";
+
+class Inventory extends React.Component {
+  render() {
+    return (
+      <div className="inventory">
+        <h2>Inventory</h2>
+        <AddFishForm addFish={this.props.addFish} />
+        <button onClick={this.props.loadSampleFishes}>
+          Load Sample Fishes
+        </button>
+      </div>
+    );
+  }
+}
+
+export default Inventory;
+```
