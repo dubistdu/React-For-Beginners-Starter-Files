@@ -188,3 +188,4 @@ class Inventory extends React.Component {
 
 export default Inventory;
 ```
+^^^ loadSampleFishes function needs to live (be created) in App.js since function that updates the state needs to be in the same component as where state lives.
