@@ -129,3 +129,10 @@ export default StorePicker;
 A constructor can use the super keyword to call the constructor of the super class."
 If you are using `constructor`, you always call `super`
 When you call `super()`, this calls React.Component which needs to be ran before extending class Created ex) `StorePciker`
+
+# state
+Where data lives
+** form inputs video (video 14) good reference for form
+    https://courses.wesbos.com/account/access/592dd6fec373d435bb82dc0f/view/257752755
+    source code 
+    https://github.com/wesbos/React-For-Beginners-Starter-Files/blob/master/stepped-solutions/14/components/AddFishForm.js
